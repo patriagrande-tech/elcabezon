@@ -163,6 +163,9 @@ p { margin: 0 0 1.1em 0; }
 .logo {
     display: flex;
     flex-direction: column;
+    /* Sin esto, la marca se estira al ancho del rotulo de abajo y el
+       degradado tricolor queda corrido respecto de las letras */
+    align-items: flex-start;
     line-height: 1;
 }
 .logo .marca {
@@ -284,15 +287,17 @@ p { margin: 0 0 1.1em 0; }
    rubro se coma a los otros. Fondo asfalto y tipografia grande. */
 .portada--marca {
     min-height: 0;
+    padding-top: calc(var(--header-alto) + 2.5rem);
     padding-bottom: clamp(3rem, 6vw, 4.5rem);
     background: linear-gradient(160deg, var(--carbon-700), var(--carbon-900) 65%);
     text-align: center;
 }
 /* El tridente de fotos adentro de la portada: las fotos pesan mas que el nombre */
 .portada--marca .grilla_servicios {
-    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    margin-top: clamp(2.2rem, 4.5vw, 3rem);
     text-align: left;
 }
+.portada--marca .servicio { min-height: 300px; }
 .portada--marca::after { content: none; }
 .portada--marca .volanta {
     display: block;
@@ -301,7 +306,7 @@ p { margin: 0 0 1.1em 0; }
     letter-spacing: 0.24em;
     text-transform: uppercase;
     color: var(--claro-300);
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
 }
 .portada--marca h1 {
     font-size: clamp(2.6rem, 7vw, 4.2rem);
@@ -320,7 +325,7 @@ p { margin: 0 0 1.1em 0; }
 }
 .portada--marca .bajada {
     max-width: 56ch;
-    margin: 0 auto 2.2rem;
+    margin: 0 auto 1.6rem;
     font-size: clamp(1rem, 2.2vw, 1.2rem);
     color: var(--claro-300);
 }
