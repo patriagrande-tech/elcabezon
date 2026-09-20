@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="12" fill="#16171c"/>
-  <rect x="0" y="46" width="22" height="8" fill="#cf1f25"/>
+  <rect x="0" y="46" width="22" height="8" fill="#1c8a4c"/>
   <rect x="22" y="46" width="20" height="8" fill="#ffffff"/>
-  <rect x="42" y="46" width="22" height="8" fill="#1c8a4c"/>
+  <rect x="42" y="46" width="22" height="8" fill="#cf1f25"/>
   <text x="32" y="40" text-anchor="middle" font-family="Arial Narrow, Arial, sans-serif" font-size="34" font-weight="bold" fill="#ffffff">EC</text>
 </svg>
