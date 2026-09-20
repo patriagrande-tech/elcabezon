@@ -2,7 +2,7 @@
 
 Sitio de **El Cabezón**, el transporte del tío de Federico (familia materna).
 El nombre homenajea a un tío fallecido. Proyecto hermano de El Lucero del Sur,
-con la misma arquitectura de diseño pero identidad propia (carbón + naranja).
+con la misma arquitectura de diseño pero identidad propia: los colores rojo, blanco y verde del auto con el que los tíos corrían en el TC.
 
 **Estado: prototipo** publicado en GitHub Pages para revisarlo en familia.
 Cuando se apruebe, se define dominio y hosting (¿Ferozo, como Lucero?) y ahí
@@ -29,7 +29,7 @@ se puede sumar formulario de presupuesto en PHP como el de Lucero.
 ## Estructura
 
 - `index.html` — one-page con anclas: #escenario, #hormigon, #cargas, #contacto.
-- `css/estilos.css` — sistema de diseño (base Lucero, paleta carbón/naranja).
+- `css/estilos.css` — sistema de diseño (base Lucero, paleta TC: rojo/blanco/verde sobre carbón).
 - `js/sitio.js` — menú móvil, cabecera sólida, aparición al scrollear.
 - `imag/` — fotos procesadas: recortadas y con patentes pixeladas (Pillow).
   Las originales están en `Desktop\Fede\Cabezón`.

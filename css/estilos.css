@@ -1,7 +1,8 @@
 /* ===========================================================================
    EL CABEZÓN - Sistema de diseño
-   Basado en el de El Lucero del Sur, con identidad propia: carbón/asfalto +
-   naranja (el color de las franjas de los trompos y de la obra).
+   Basado en el de El Lucero del Sur, con identidad propia: los colores del
+   auto con el que los tíos corrían en el Turismo Carretera — rojo, blanco y
+   verde — sobre carbón/asfalto. La franja tricolor es el guiño a la livery.
    Escrito mobile-first: lo que ves primero es lo que se ve en el celular.
    =========================================================================== */
 
@@ -10,8 +11,10 @@
     --carbon-800: #1f212a;
     --carbon-700: #2c2f3b;
 
-    --naranja:     #ef7215;
-    --naranja-osc: #c95c08;
+    --rojo:     #cf1f25;
+    --rojo-osc: #a31219;
+    --verde:     #1c8a4c;
+    --verde-osc: #10653a;
 
     --gris-050: #f6f7f9;
     --gris-100: #e9ebee;
@@ -28,6 +31,8 @@
     --sombra-fuerte: 0 18px 50px rgba(15, 16, 20, 0.28);
 
     --header-alto: 74px;
+
+    --tricolor: linear-gradient(90deg, var(--rojo) 0 33.3%, var(--blanco) 33.3% 66.6%, var(--verde) 66.6% 100%);
 
     --titulo: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
     --texto: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -50,8 +55,8 @@ body {
 
 img { max-width: 100%; height: auto; display: block; }
 
-a { color: var(--naranja-osc); text-decoration: none; }
-a:hover { color: var(--naranja); }
+a { color: var(--rojo-osc); text-decoration: none; }
+a:hover { color: var(--rojo); }
 
 h1, h2, h3, h4 {
     font-family: var(--titulo);
@@ -87,7 +92,7 @@ p { margin: 0 0 1.1em 0; }
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--naranja);
+    color: var(--rojo);
     margin-bottom: 0.7rem;
 }
 .encabezado_seccion p { color: var(--gris-600); font-size: 1.05rem; margin-bottom: 0; }
@@ -111,8 +116,8 @@ p { margin: 0 0 1.1em 0; }
     transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease;
 }
 .boton:hover { transform: translateY(-2px); }
-.boton--naranja { background: var(--naranja); color: var(--carbon-900); }
-.boton--naranja:hover { background: var(--naranja-osc); color: var(--blanco); }
+.boton--rojo { background: var(--rojo); color: var(--blanco); }
+.boton--rojo:hover { background: var(--rojo-osc); color: var(--blanco); }
 .boton--linea { border-color: currentColor; color: var(--blanco); }
 .boton--linea:hover { background: rgba(255, 255, 255, 0.14); color: var(--blanco); }
 .boton svg { width: 20px; height: 20px; fill: currentColor; }
@@ -130,8 +135,15 @@ p { margin: 0 0 1.1em 0; }
     align-items: center;
     background: rgba(15, 16, 20, 0.85);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
     transition: background-color 0.25s ease;
+}
+/* La franja tricolor de la livery del TC, bien abajo de la cabecera */
+.cabecera::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 3px;
+    background: var(--tricolor);
 }
 .cabecera.solida { background: var(--carbon-900); }
 
@@ -156,7 +168,7 @@ p { margin: 0 0 1.1em 0; }
     text-transform: uppercase;
     color: var(--blanco);
 }
-.logo .marca span { color: var(--naranja); }
+.logo .marca span { color: var(--rojo); }
 .logo .rubro {
     font-size: 0.62rem;
     font-weight: 600;
@@ -254,13 +266,21 @@ p { margin: 0 0 1.1em 0; }
 
 /* Panel blanco con tipografia oscura, para que el texto no pelee con la foto */
 .panel {
+    position: relative;
+    overflow: hidden;
     max-width: 640px;
     padding: clamp(1.8rem, 4vw, 2.8rem);
     background: rgba(255, 255, 255, 0.96);
-    border-left: 6px solid var(--naranja);
     border-radius: var(--radio);
     box-shadow: var(--sombra-fuerte);
     color: var(--gris-900);
+}
+.panel::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 6px;
+    background: var(--tricolor);
 }
 .panel .volanta {
     display: block;
@@ -268,7 +288,7 @@ p { margin: 0 0 1.1em 0; }
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--naranja-osc);
+    color: var(--rojo);
     margin-bottom: 0.8rem;
 }
 .panel h1 { color: var(--carbon-900); margin-bottom: 0.6rem; }
@@ -354,7 +374,7 @@ p { margin: 0 0 1.1em 0; }
     top: 0.62em;
     width: 12px;
     height: 2px;
-    background: var(--naranja);
+    background: var(--verde);
 }
 .seccion--oscura .lista_marcada li { color: rgba(255, 255, 255, 0.85); }
 
@@ -422,15 +442,23 @@ p { margin: 0 0 1.1em 0; }
     gap: 1.2rem;
 }
 .via_contacto {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
     padding: 1.6rem;
     background: var(--blanco);
     border: 1px solid var(--gris-100);
-    border-top: 3px solid var(--naranja);
     border-radius: var(--radio);
     box-shadow: var(--sombra);
+}
+.via_contacto::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--tricolor);
 }
 .via_contacto .rotulo {
     font-size: 0.75rem;
@@ -457,10 +485,18 @@ p { margin: 0 0 1.1em 0; }
    =========================================================================== */
 
 .pie {
+    position: relative;
     background: var(--carbon-900);
     color: rgba(255, 255, 255, 0.75);
     padding: clamp(2.5rem, 5vw, 3.5rem) 0 0;
     font-size: 0.95rem;
+}
+.pie::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--tricolor);
 }
 .pie_grilla {
     display: grid;
@@ -475,7 +511,7 @@ p { margin: 0 0 1.1em 0; }
 }
 .pie ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
 .pie a { color: rgba(255, 255, 255, 0.75); }
-.pie a:hover { color: var(--naranja); }
+.pie a:hover { color: var(--rojo); }
 .pie .logo { margin-bottom: 1rem; }
 .pie p { color: rgba(255, 255, 255, 0.6); }
 
