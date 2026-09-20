@@ -119,6 +119,8 @@ p { margin: 0 0 1.1em 0; }
 .boton:hover { transform: translateY(-2px); }
 .boton--rojo { background: var(--rojo); color: var(--blanco); }
 .boton--rojo:hover { background: var(--rojo-osc); color: var(--blanco); }
+.boton--verde { background: var(--verde); color: var(--blanco); }
+.boton--verde:hover { background: var(--verde-osc); color: var(--blanco); }
 .boton--linea { border-color: currentColor; color: var(--blanco); }
 .boton--linea:hover { background: rgba(255, 255, 255, 0.14); color: var(--blanco); }
 .boton svg { width: 20px; height: 20px; fill: currentColor; }
@@ -169,7 +171,7 @@ p { margin: 0 0 1.1em 0; }
     text-transform: uppercase;
     color: var(--blanco);
 }
-.logo .marca span { color: var(--rojo); }
+.logo .marca span { color: var(--verde); }
 .logo .rubro {
     font-size: 0.62rem;
     font-weight: 600;
@@ -287,7 +289,7 @@ p { margin: 0 0 1.1em 0; }
     color: var(--blanco);
     margin-bottom: 0.4rem;
 }
-.portada--marca h1 span { color: var(--rojo); }
+.portada--marca h1 span { color: var(--verde); }
 .portada--marca .bajada {
     max-width: 56ch;
     margin: 0 auto 2.2rem;
@@ -508,7 +510,7 @@ p { margin: 0 0 1.1em 0; }
    =========================================================================== */
 
 .franja_cta {
-    background: linear-gradient(120deg, var(--carbon-700), var(--carbon-900));
+    background: linear-gradient(120deg, var(--verde-osc), var(--carbon-900) 80%);
     color: var(--blanco);
     text-align: center;
 }
