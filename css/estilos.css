@@ -291,7 +291,16 @@ p { margin: 0 0 1.1em 0; }
     color: var(--blanco);
     margin-bottom: 0.4rem;
 }
-.portada--marca h1 span { color: var(--verde); }
+/* El titulo pintado con la livery, como la barra tricolor */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .portada--marca h1 {
+        display: inline-block;
+        background: var(--tricolor);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+}
 .portada--marca .bajada {
     max-width: 56ch;
     margin: 0 auto 2.2rem;
