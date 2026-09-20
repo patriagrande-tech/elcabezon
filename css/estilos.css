@@ -619,6 +619,28 @@ p { margin: 0 0 1.1em 0; }
 }
 
 /* ===========================================================================
+   BOTON FLOTANTE DE WHATSAPP
+   =========================================================================== */
+
+.wa_flotante {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 90;
+    display: grid;
+    place-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #25d366;
+    color: var(--blanco);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.18s ease;
+}
+.wa_flotante:hover { transform: scale(1.09); color: var(--blanco); }
+.wa_flotante svg { width: 30px; height: 30px; fill: currentColor; }
+
+/* ===========================================================================
    APARICION AL HACER SCROLL
    =========================================================================== */
 
