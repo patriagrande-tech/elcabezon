@@ -32,8 +32,10 @@
 
     --header-alto: 74px;
 
-    /* Como la livery del auto: rojo arriba, blanco al medio, verde abajo */
-    --tricolor: linear-gradient(180deg, var(--rojo) 0 33.3%, var(--blanco) 33.3% 66.6%, var(--verde) 66.6% 100%);
+    /* Como la livery del auto: verde a la izquierda, blanco al medio, rojo a la derecha */
+    --tricolor: linear-gradient(90deg, var(--verde) 0 33.3%, var(--blanco) 33.3% 66.6%, var(--rojo) 66.6% 100%);
+    /* La misma livery para barras verticales: verde arriba, rojo abajo */
+    --tricolor-vert: linear-gradient(180deg, var(--verde) 0 33.3%, var(--blanco) 33.3% 66.6%, var(--rojo) 66.6% 100%);
 
     --titulo: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
     --texto: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -347,7 +349,7 @@ p { margin: 0 0 1.1em 0; }
     bottom: 0;
     width: 5px;
     z-index: 2;
-    background: var(--tricolor);
+    background: var(--tricolor-vert);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.28s ease;
