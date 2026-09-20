@@ -174,6 +174,17 @@ p { margin: 0 0 1.1em 0; }
     color: var(--blanco);
 }
 .logo .marca span { color: var(--verde); }
+/* La marca pintada con la livery, igual que el titulo de la portada */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .logo .marca {
+        display: inline-block;
+        background: var(--tricolor);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .logo .marca span { color: inherit; }
+}
 .logo .rubro {
     font-size: 0.62rem;
     font-weight: 600;
@@ -272,9 +283,15 @@ p { margin: 0 0 1.1em 0; }
 /* Portada general de marca: sin foto de un servicio puntual, para que ningun
    rubro se coma a los otros. Fondo asfalto y tipografia grande. */
 .portada--marca {
-    min-height: min(72vh, 640px);
+    min-height: 0;
+    padding-bottom: clamp(3rem, 6vw, 4.5rem);
     background: linear-gradient(160deg, var(--carbon-700), var(--carbon-900) 65%);
     text-align: center;
+}
+/* El tridente de fotos adentro de la portada: las fotos pesan mas que el nombre */
+.portada--marca .grilla_servicios {
+    margin-top: clamp(2.5rem, 5vw, 3.5rem);
+    text-align: left;
 }
 .portada--marca::after { content: none; }
 .portada--marca .volanta {
@@ -287,7 +304,7 @@ p { margin: 0 0 1.1em 0; }
     margin-bottom: 1rem;
 }
 .portada--marca h1 {
-    font-size: clamp(3.2rem, 10vw, 6rem);
+    font-size: clamp(2.6rem, 7vw, 4.2rem);
     color: var(--blanco);
     margin-bottom: 0.4rem;
 }
