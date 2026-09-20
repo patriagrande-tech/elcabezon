@@ -17,7 +17,7 @@ se puede sumar formulario de presupuesto en PHP como el de Lucero.
 ## Pendientes (preguntar al tío)
 
 - [x] WhatsApp/teléfono: +54 9 11 5838-2354 (cargado con enlace directo y botón flotante).
-- [ ] Zona de trabajo y localidad.
+- [x] Zona: llegamos a todo el país (cargado).
 - [x] Mail: jdromero78@hotmail.com (cargado). Redes: pendiente.
 - [ ] Nombre formal de la empresa (¿"El Cabezón" a secas? ¿S.A./S.R.L.?).
 - [ ] La historia del Cabezón para la sección "quiénes somos" (si quiere).
