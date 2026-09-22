@@ -17,8 +17,8 @@
 .enlace-claro:hover { color: white; }
 .hero-nota { color: #a9b1c2; font-size: .76rem; margin: 1.1rem 0 0; }
 .hero-foto { margin: 0; position: relative; }
-.hero-foto::before { content: ''; position: absolute; top: -12px; right: -12px; width: 28%; height: 45%; border-top: 3px solid var(--rojo); border-right: 3px solid var(--rojo); }
-.hero-foto img { width: 100%; aspect-ratio: 1.18; object-fit: cover; border-radius: 3px; }
+/* El encuadre horizontal elimina las bandas de la foto sin cortar los laterales. */
+.hero-foto img { width: 100%; aspect-ratio: 2.06; object-fit: cover; object-position: center; border-radius: 3px; }
 .hero-foto figcaption { display: flex; justify-content: space-between; gap: .5rem; padding-top: .9rem; color: #a9b1c2; font-size: .66rem; letter-spacing: .05em; text-transform: uppercase; }
 .banda-datos { background: #eceee9; border-bottom: 1px solid #dbded5; }
 .banda-datos ul { display: grid; list-style: none; padding: 0; }
@@ -104,7 +104,6 @@
 }
 @media (max-width: 599px) {
     .escenario-hero { padding-top: calc(var(--header-alto) + 2.5rem); }
-    .hero-foto img { aspect-ratio: 16 / 10; }
     .galeria-escenario { grid-template-columns: 1fr; }
     .banda-datos li { flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1rem; }
     .banda-datos strong { font-size: 1.3rem; }
