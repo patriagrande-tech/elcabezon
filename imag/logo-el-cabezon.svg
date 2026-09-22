@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+<title id="title">Transporte El Cabezón</title>
+<desc id="desc">Marca blanca sobre fondo carbón con una franja verde, blanca y roja.</desc>
+<rect width="1024" height="1024" fill="#16171c"/>
+<text x="512" y="295.333" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="8" fill="#ffffff">TRANSPORTE</text>
+<text x="512" y="435.000" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-weight="400" font-size="120" letter-spacing="2" fill="#ffffff">EL</text>
+<text x="512" y="645.000" text-anchor="middle" font-family="Impact, Arial Narrow, sans-serif" font-weight="400" font-size="174" letter-spacing="1" fill="#ffffff">CABEZÓN</text>
+<rect x="242" y="696" width="180" height="20" fill="#1c8a4c"/>
+<rect x="422" y="696" width="180" height="20" fill="#ffffff"/>
+<rect x="602" y="696" width="180" height="20" fill="#cf1f25"/>
+</svg>

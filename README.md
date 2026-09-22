@@ -36,4 +36,34 @@ se puede sumar formulario de presupuesto en PHP como el de Lucero.
 
 ## Publicación
 
+### Landing del escenario
+
+`alquiler-escenario.html` es la página específica para campañas y consultas de
+alquiler. Está enlazada desde la portada, el menú y la sección del escenario.
+Comparte `css/estilos.css` y agrega `css/escenario.css` y `js/escenario.js`.
+El formulario prepara un mensaje de WhatsApp; el visitante revisa y envía.
+
+Condiciones informadas por Federico el 21/09/2026:
+
+- Cobertura nacional con camiones; viaje a cotizar según destino.
+- Ejemplo CABA: $1.000.000 total si el servicio termina en el día.
+- Si el camión queda después de las 00:00 se suma estadía, en promedio
+  $800.000 por día. Ejemplo CABA + un día de estadía: $1.800.000.
+- Los valores se presentan como orientativos en pesos argentinos;
+  disponibilidad, importe final y condiciones se confirman al cotizar.
+
+Datos adicionales confirmados por Federico:
+
+- El alquiler incluye únicamente el escenario; no incluye sonido ni iluminación.
+- Montaje aproximado de dos horas mediante el sistema hidráulico del camión.
+- Los 14 metros mencionados son una referencia del semirremolque, no una medida
+  confirmada de la superficie útil. No publicarlos como dimensiones del escenario.
+
+Pendientes para completar la ficha comercial: frente y profundidad útil del
+escenario desplegado, altura libre bajo techo, requisitos de acceso, impuestos y
+condiciones de reserva. No se afirman prestaciones ni medidas sin confirmar.
+
+Vista previa local: `python -m http.server 8765 --bind 127.0.0.1` desde este
+directorio y abrir `http://127.0.0.1:8765/alquiler-escenario.html`.
+
 GitHub Pages desde la rama `main`. Para publicar cambios: commit + push.
